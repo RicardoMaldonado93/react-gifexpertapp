@@ -3,21 +3,24 @@ import PropTypes from 'prop-types';
 
 export const AddCategory = ({setCategory}) => {
     
-    const [inputValue, setInputValue] = useState('One Puch');
+    const [inputValue, setInputValue] = useState('');
 
-    const handleInputChange = ({target}) => setInputValue(target.value); 
+    const handleInputChange = ({target}) =>setInputValue(target.value);
+
     const handleSubmit = (e)=>{ 
         e.preventDefault(); 
 
-        if(inputValue.trim()){
-            setCategory((items)=>[  inputValue, ...items ]);
+        if(inputValue.trim().length > 2){
+            setCategory( items =>[  inputValue, ...items ]);
             setInputValue("");
-            document.querySelector("input").placeholder = "ingrese categoria..."
+            // document.querySelector("input").placeholder = "ingrese categoria..."
         }
+
     };
 
     return (
         <form onSubmit={handleSubmit}>
+            <p>{inputValue}</p>
             <input 
                 type="text"
                 value={inputValue}
