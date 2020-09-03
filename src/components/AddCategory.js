@@ -20,7 +20,8 @@ export const AddCategory = ({setCategory}) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <p>{inputValue}</p>
+            {/*  A modo de test unitario para hacer pruebas de value  */}
+            <p style={{'opacity':'0.01', 'position':'absolute'}}>{inputValue}</p>
             <input 
                 type="text"
                 value={inputValue}

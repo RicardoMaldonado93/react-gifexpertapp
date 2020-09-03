@@ -4,7 +4,14 @@ exports[`Unit test for 'AddCategory' should render correctly component 1`] = `
 <form
   onSubmit={[Function]}
 >
-  <p />
+  <p
+    style={
+      Object {
+        "opacity": "0.01",
+        "position": "absolute",
+      }
+    }
+  />
   <input
     onChange={[Function]}
     type="text"
